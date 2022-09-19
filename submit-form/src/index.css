@@ -1,0 +1,51 @@
+@import url("./fonts/stylesheet.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .background {
+    @apply w-screen h-screen fixed left-0 top-0 right-0 bottom-0;
+  }
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+input[type="file"]::before {
+  content: "Upload";
+  height: 34px;
+  display: inline-block;
+  background: #c4c4c4;
+  border: 1px solid #999;
+  border-radius: 3px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 16px;
+  width: 80px;
+  float: right;
+  padding-left: 12px;
+}
+
+input[type="file"]:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+iframe {
+  width: 0px;
+  height: 0px;
+  display: none;
+}
